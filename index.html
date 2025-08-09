@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Raksha Bandhan Thangachi ❤</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        color: white;
+        text-align: center;
+        background: linear-gradient(270deg, #ff758c, #ff7eb3, #ffb199);
+        background-size: 600% 600%;
+        animation: bgAnim 20s ease infinite;
+    }
+    @keyframes bgAnim {
+        0% {background-position:0% 50%;}
+        50% {background-position:100% 50%;}
+        100% {background-position:0% 50%;}
+    }
+    .slide {
+        display: none;
+        padding: 20px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .slide h1, .slide p {
+        animation: fadeIn 2s ease forwards;
+    }
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+    img {
+        max-width: 80%;
+        max-height: 70vh;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(255,255,255,0.6);
+    }
+</style>
+</head>
+<body>
+
+<audio autoplay loop>
+    <source src="music/background.mp3" type="audio/mpeg">
+</audio>
+
+<div class="slide">
+    <h1>🎉 Happy Raksha Bandhan 🎉</h1>
+    <img src="images/rakhi1.jpg" alt="Rakhi Image">
+</div>
+
+<div class="slide">
+    <p>Happy Raksha Bandhan to u my thangachi Sanchu 🫂😘😘🎊<br>
+    Always be very successful in ur life...</p>
+</div>
+
+<div class="slide">
+    <img src="images/festive1.jpg" alt="Festive Image">
+</div>
+
+<div class="slide">
+    <p>I will be there for u in every situation solla theva illa... but irupen...<br>
+    In whatever role u need me – as a friend, as a body guard, or as a supporting person etc... 😍😍😍❤</p>
+</div>
+
+<div class="slide">
+    <img src="images/your_photo.jpg" alt="Your Personal Photo">
+</div>
+
+<div class="slide">
+    <h1>Love u soo much my thangachi ❤😍😘</h1>
+</div>
+
+<script>
+    let slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    let slideDuration = (10 * 60 * 1000) / slides.length; // total 10 mins divided by slides
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = (i === index) ? 'flex' : 'none';
+        });
+    }
+    function nextSlide() {
+        currentSlide++;
+        if (currentSlide >= slides.length) currentSlide = 0;
+        showSlide(currentSlide);
+    }
+    showSlide(0);
+    setInterval(nextSlide, slideDuration);
+</script>
+
+</body>
+</html>
